@@ -1,5 +1,0 @@
-<odoo>
-    <record id="dashboard_demo_1" model="test_module.dashboard">
-        <field name="name">Hello from the Test button</field>
-    </record>
-</odoo>

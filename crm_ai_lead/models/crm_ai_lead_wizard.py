@@ -8,7 +8,7 @@ from odoo.exceptions import UserError
 # a space, so it can't be imported as a normal Python package). Add it to
 # sys.path so we can import it directly.
 _AI_OPS_DIR = os.path.normpath(
-    os.path.join(os.path.dirname(__file__), '..', '..', 'CRM system', 'AI operations system')
+    os.path.join(os.path.dirname(__file__), '..', '..', 'AI operations system')
 )
 if _AI_OPS_DIR not in sys.path:
     sys.path.insert(0, _AI_OPS_DIR)

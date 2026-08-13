@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_case_tree_view_leads_ai_button" model="ir.ui.view">
+        <field name="name">crm.lead.list.lead.ai.button</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="js_class">crm_ai_lead_list</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

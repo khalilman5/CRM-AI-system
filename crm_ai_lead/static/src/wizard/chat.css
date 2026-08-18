@@ -1,0 +1,114 @@
+.o_field_crm_ai_lead_chat {
+    width: 100%;
+}
+
+.o_crm_ai_chat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 420px;
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 8px;
+    background-color: var(--o-view-background-color, #fff);
+    margin-bottom: 12px;
+}
+
+.o_crm_ai_chat_empty {
+    margin: auto;
+    text-align: center;
+    max-width: 320px;
+}
+
+.o_crm_ai_chat_row {
+    display: flex;
+    width: 100%;
+}
+
+.o_crm_ai_chat_row_user {
+    justify-content: flex-end;
+}
+
+.o_crm_ai_chat_row_assistant {
+    justify-content: flex-start;
+}
+
+.o_crm_ai_chat_bubble {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.o_crm_ai_chat_bubble_user {
+    background-color: #714B67;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+}
+
+.o_crm_ai_chat_bubble_assistant {
+    background-color: #f0f0f0;
+    color: #212529;
+    border-bottom-left-radius: 4px;
+}
+
+.o_crm_ai_chat_typing {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 14px;
+}
+
+.o_crm_ai_chat_dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #8a8a8a;
+    animation: o_crm_ai_chat_dot_bounce 1.2s infinite ease-in-out;
+}
+
+.o_crm_ai_chat_dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.o_crm_ai_chat_dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes o_crm_ai_chat_dot_bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    30% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}
+
+.o_crm_ai_chat_composer {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.o_crm_ai_chat_input {
+    flex: 1 1 auto;
+    resize: none;
+    min-height: 38px;
+    max-height: 140px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color, #dee2e6);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.o_crm_ai_chat_input:disabled {
+    background-color: #f8f9fa;
+}
+
+.o_crm_ai_chat_send {
+    flex: 0 0 auto;
+}

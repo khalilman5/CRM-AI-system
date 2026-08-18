@@ -13,6 +13,9 @@
         'web.assets_backend': [
             'crm_ai_lead/static/src/views/*.js',
             'crm_ai_lead/static/src/views/*.xml',
+            'crm_ai_lead/static/src/wizard/*.js',
+            'crm_ai_lead/static/src/wizard/*.xml',
+            'crm_ai_lead/static/src/wizard/*.css',
         ],
     },
     'installable': True,

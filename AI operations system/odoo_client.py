@@ -22,3 +22,21 @@ class OdooClient:
             "crm.lead", "create",
             [vals],
         )
+
+    def find_id(self, model: str, domain: list) -> int | None:
+        ids = self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "search",
+            [domain], {"limit": 1},
+        )
+        return ids[0] if ids else None
+
+    def find_or_create_id(self, model: str, domain: list, vals: Dict[str, Any]) -> int:
+        found = self.find_id(model, domain)
+        if found is not None:
+            return found
+        return self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "create",
+            [vals],
+        )

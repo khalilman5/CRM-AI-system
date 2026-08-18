@@ -4,14 +4,9 @@
         <field name="name">crm.ai.lead.wizard.form</field>
         <field name="model">crm.ai.lead.wizard</field>
         <field name="arch" type="xml">
-            <form string="New Lead AI">
-                <header>
-                    <button name="action_generate_lead" type="object" string="Generate Lead" class="btn-primary"/>
-                </header>
+            <form string="New Lead AI" create="0">
                 <sheet>
-                    <group>
-                        <field name="prompt" nolabel="1" placeholder="e.g. Create a lead for Sarah, she wants to rent an apartment, phone 0612345678, email sarah@example.com"/>
-                    </group>
+                    <field name="message_ids" widget="crm_ai_lead_chat" nolabel="1"/>
                 </sheet>
             </form>
         </field>

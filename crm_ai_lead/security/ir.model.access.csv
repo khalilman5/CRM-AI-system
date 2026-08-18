@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_crm_ai_lead_wizard,crm.ai.lead.wizard,model_crm_ai_lead_wizard,base.group_user,1,1,1,1
+access_crm_ai_lead_wizard_message,crm.ai.lead.wizard.message,model_crm_ai_lead_wizard_message,base.group_user,1,1,1,1

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="crm_lead_view_form_orchid_ai" model="ir.ui.view">
+
+        <field name="name">crm.lead.form.orchid.ai</field>
+
+        <field name="model">crm.lead</field>
+
+        <field
+            name="inherit_id"
+            ref="crm.crm_lead_view_form"
+        />
+
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet" position="inside">
+
+                <group string="Orchid Island Lead Information">
+
+                    <group string="Contact Request">
+
+                        <field name="x_client_email"/>
+
+                        <field name="x_property_type"/>
+
+                        <field name="x_contact_subject"/>
+
+                    </group>
+
+                    <group string="AI Lead Intelligence">
+
+                        <field name="x_ai_score"/>
+
+                        <field name="x_ai_priority"/>
+
+                        <field name="x_ai_intent"/>
+
+                        <field name="x_ai_budget"/>
+
+                        <field name="x_ai_currency"/>
+
+                        <field name="x_ai_location"/>
+
+                        <field name="x_ai_timeline"/>
+
+                    </group>
+
+                    <group string="AI Summary">
+
+                        <field
+                            name="x_ai_summary"
+                            nolabel="1"
+                        />
+
+                    </group>
+
+                </group>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+</odoo>

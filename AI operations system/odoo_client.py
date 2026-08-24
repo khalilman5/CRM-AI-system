@@ -40,3 +40,31 @@ class OdooClient:
             model, "create",
             [vals],
         )
+
+    def search_read(self, model: str, domain: list, fields: list) -> list:
+        ids = self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "search",
+            [domain],
+        )
+        if not ids:
+            return []
+        return self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "read",
+            [ids, fields],
+        )
+
+    def unlink(self, model: str, ids: list) -> bool:
+        return self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "unlink",
+            [ids],
+        )
+
+    def write(self, model: str, ids: list, vals: Dict[str, Any]) -> bool:
+        return self.models.execute_kw(
+            self.db, self.uid, self.password,
+            model, "write",
+            [ids, vals],
+        )
